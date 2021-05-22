@@ -59,8 +59,8 @@ export default function Form({ renderApi, setCounter, counter }) {
       })
       console.log(`formData response:`, data)
 
-    } catch (ex) {
-      console.log(ex)
+    } catch (error) {
+      console.log(error?.message[0]?.messages[0]?.message)
     }
   }
 
