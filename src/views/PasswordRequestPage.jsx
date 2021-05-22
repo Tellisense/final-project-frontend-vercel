@@ -67,8 +67,8 @@ const PasswordRequestPage = () => {
       console.log(`password Request response:`, data)
       history.push("/email-sent");
 
-    } catch (ex) {
-      console.log(ex)
+    } catch (error) {
+      console.log(error.message[0].messages[0].message)
     }
 
 

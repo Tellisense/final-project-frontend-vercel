@@ -19,9 +19,9 @@ const Products = () => {
   //       setProducts(data)
   //     }
   //     apiCall()
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
+  //    } catch (error) {
+  //console.log(error.message[0].messages[0].message)
+  //}
   // }, [])
 
 

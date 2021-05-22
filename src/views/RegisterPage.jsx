@@ -88,10 +88,7 @@ const RegisterPage = () => {
         })
         history.replace("/confirm-registration");
       })
-      .catch(error => console.log(`this is an error: `, error))
-
-
-
+      .catch(error => console.log(error.message[0].messages[0].message))
 
     // try {
     //   const { data } = await axios.post('http://localhost:1337/auth/local/register', {

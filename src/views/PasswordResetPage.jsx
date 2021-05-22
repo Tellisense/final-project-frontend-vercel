@@ -81,8 +81,8 @@ const PasswordResetPage = () => {
       })
       history.replace("/");
 
-    } catch (ex) {
-      console.log(ex)
+    } catch (error) {
+      console.log(error.message[0].messages[0].message)
     }
 
 
