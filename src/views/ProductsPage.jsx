@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([])
@@ -87,7 +87,7 @@ const Products = () => {
     <div>
       <h1 className="text-4xl font-black ">Products Page</h1>
       <ul>
-        {/* {products.map((item) => <li key={item.id}>{item.name}</li>)} */}
+        {products.map((item) => <li key={item.id}>{item.name}</li>)}
       </ul>
     </div>
   );
