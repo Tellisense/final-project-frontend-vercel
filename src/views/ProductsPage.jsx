@@ -27,6 +27,7 @@ const Products = () => {
 
   // POST request Using Axios
   useEffect(() => {
+    const token = localStorage.getItem('token')
     try {
       const apiCall = async () => {
         const { data } = await axios.post('https://guarded-mountain-49423.herokuapp.com/products', {
@@ -37,7 +38,7 @@ const Products = () => {
           {
             headers: {
               Authorization:
-                'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjIxNTU0NTM1LCJleHAiOjE2MjQxNDY1MzV9.5lxcAZ3lnVKU-nPw1mCbz0mMwdqJHSC9N9E5xbqS95Q'
+                `Bearer ${token}`
             }
           })
         setProducts(data)
