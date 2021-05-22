@@ -43,7 +43,7 @@ export default function Form({ renderApi, setCounter, counter }) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const { data } = await axios.post('http://localhost:1337/orders', {
+      const { data } = await axios.post('https://guarded-mountain-49423.herokuapp.com/orders', {
         data: formData,
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

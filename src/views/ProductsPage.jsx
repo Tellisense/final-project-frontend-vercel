@@ -29,7 +29,7 @@ const Products = () => {
   useEffect(() => {
     try {
       const apiCall = async () => {
-        const { data } = await axios.post('http://localhost:1337/products', {
+        const { data } = await axios.post('https://guarded-mountain-49423.herokuapp.com/products', {
           name: "new Name",
           size: "new Size",
           color: "new Color"
