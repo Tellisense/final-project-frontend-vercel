@@ -63,7 +63,7 @@ const RegisterPage = () => {
     e.preventDefault()
     // make the api call
 
-    fetch('https://guarded-mountain-49423.herokuapp.com/auth/local/register', {
+    fetch('https://justin-strapi-backend.herokuapp.com/auth/local/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

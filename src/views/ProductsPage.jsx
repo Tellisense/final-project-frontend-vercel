@@ -30,7 +30,7 @@ const Products = () => {
     const token = localStorage.getItem('token')
     try {
       const apiCall = async () => {
-        const { data } = await axios.post('https://guarded-mountain-49423.herokuapp.com/products', {
+        const { data } = await axios.post('https://justin-strapi-backend.herokuapp.com/products', {
           name: "new Name",
           size: "new Size",
           color: "new Color"

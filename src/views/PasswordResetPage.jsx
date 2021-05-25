@@ -66,7 +66,7 @@ const PasswordResetPage = () => {
     e.preventDefault()
     // make the api call
     try {
-      const { data } = await axios.post('https://guarded-mountain-49423.herokuapp.com/auth/reset-password', {
+      const { data } = await axios.post('https://justin-strapi-backend.herokuapp.com/auth/reset-password', {
         code: code,
         password: formData.password,
         passwordConfirmation: formData.passwordConfirmation

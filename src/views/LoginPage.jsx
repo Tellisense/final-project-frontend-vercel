@@ -60,7 +60,7 @@ const LoginPage = () => {
     e.preventDefault()
 
     try {
-      const { data } = await axios.post('https://guarded-mountain-49423.herokuapp.com/auth/local', {
+      const { data } = await axios.post('https://justin-strapi-backend.herokuapp.com/auth/local', {
         identifier: loginData.email,
         password: loginData.password,
       });

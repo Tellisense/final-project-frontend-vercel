@@ -59,10 +59,10 @@ const PasswordRequestPage = () => {
     e.preventDefault()
     // make the api call
     try {
-      const { data } = await axios.post('https://guarded-mountain-49423.herokuapp.com/auth/forgot-password', {
+      const { data } = await axios.post('https://justin-strapi-backend.herokuapp.com/auth/forgot-password', {
         email: formData.email,
         url:
-          'https://guarded-mountain-49423.herokuapp.com/admin/plugins/users-permissions/auth/reset-password'
+          'https://justin-strapi-backend.herokuapp.com/admin/plugins/users-permissions/auth/reset-password'
       });
       console.log(`password Request response:`, data)
       history.push("/email-sent");
