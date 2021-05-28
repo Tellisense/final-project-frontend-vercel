@@ -1,5 +1,6 @@
 import React from "react";
 import Product from '../components/Product'
+import withToolTip from '../HOC/withToolTip'
 const ProductDetails = (props) => {
   console.log(`ProductDetails props: `, props)
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 const withToolTip = (Component) => {
+
   return function WithToolTip(props) {
     const [showToolTip, setShowToolTip] = useState()
 

@@ -29,10 +29,10 @@ const Navbar = () => {
           <div className="hidden ml-8 md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
             <nav>
               <ul className="md:flex items-center justify-between text-base text-red-700 pt-4 md:pt-0">
-                <li> <Link className="inline-block no-underline hover:text-black font-medium text-lg py-1 px-4 lg:-ml-2" to='/'>Home</Link></li>
+                <li> <Link title="This is my Home Page" className="inline-block no-underline hover:text-black font-medium text-lg py-1 px-4 lg:-ml-2" to='/'>Home</Link></li>
                 <li>  <Link className="inline-block no-underline hover:text-black font-medium text-lg py-1 px-4 lg:-ml-2" to='/products'>Products</Link></li>
                 <li>  <Link className="inline-block no-underline hover:text-black font-medium text-lg py-1 px-4 lg:-ml-2" to='/posts/2018/06'>Posts</Link></li>
-                <li> <Link className="inline-block no-underline hover:text-black font-medium text-lg py-1 px-4 lg:-ml-2" to='/admin'>Admin</Link></li>
+                <li> <Link title="this is the admin page" className="inline-block no-underline hover:text-black font-medium text-lg py-1 px-4 lg:-ml-2" to='/admin'>Admin</Link></li>
               </ul>
             </nav>
           </div>
@@ -43,7 +43,7 @@ const Navbar = () => {
 
 
 
-            
+
             <button onClick={handleLogin} className="bg-transparent text-gray-800  px-5 py-1 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700 whitespace-nowrap">Sign In</button>
             <button onClick={handleRegister} className="bg-red-700 text-gray-200  px-5 py-1 rounded  hover:bg-red-400 hover:text-gray-100 whitespace-nowrap">Sign Up</button>
           </div>
