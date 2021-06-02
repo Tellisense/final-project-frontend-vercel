@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,8 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-// import axios from 'axios'
-// import { useUser } from '../context/UserProvider'
+import { useUser } from '../context/UserProvider'
 import { useHistory } from 'react-router-dom';
 import Copyright from '../components/Copyright'
 
@@ -63,58 +63,58 @@ const RegisterPage = () => {
     e.preventDefault()
     // make the api call
 
-    fetch('https://justin-strapi-backend.herokuapp.com/auth/local/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        firstName: registerData.firstName,
-        lastName: registerData.lastName,
-        username: registerData.username,
-        email: registerData.email,
-        password: registerData.password
-      })
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-        setRegisterData({
-          firstName: '',
-          lastName: '',
-          username: '',
-          email: '',
-          password: ''
-        })
-        history.replace("/confirm-registration");
-      })
-      .catch(error => console.log(error?.message[0]?.messages[0]?.message))
-
-    // try {
-    //   const { data } = await axios.post('http://localhost:1337/auth/local/register', {
+    // fetch('https://justin-strapi-backend.herokuapp.com/auth/local/register', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
     //     firstName: registerData.firstName,
     //     lastName: registerData.lastName,
     //     username: registerData.username,
     //     email: registerData.email,
     //     password: registerData.password
-    //   });
-    //   console.log(`register data:`, data)
-
-    //   setRegisterData({
-    //     firstName: '',
-    //     lastName: '',
-    //     username: '',
-    //     email: '',
-    //     password: ''
     //   })
-    //   history.replace("/confirm-registration");
+    // })
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     console.log(data)
+    //     setRegisterData({
+    //       firstName: '',
+    //       lastName: '',
+    //       username: '',
+    //       email: '',
+    //       password: ''
+    //     })
+    //     history.replace("/confirm-registration");
+    //   })
+    //   .catch(error => console.log(error?.message[0]?.messages[0]?.message))
 
-    // } catch (ex) {
-    //   console.log(ex)
-    // }
+    try {
+      const { data } = await axios.post('https://justin-strapi-backend.herokuapp.com/auth/local/register', {
+        firstName: registerData.firstName,
+        lastName: registerData.lastName,
+        username: registerData.username,
+        email: registerData.email,
+        password: registerData.password
+      });
+      console.log(`register data:`, data)
+
+      setRegisterData({
+        firstName: '',
+        lastName: '',
+        username: '',
+        email: '',
+        password: ''
+      })
+      history.replace("/confirm-registration");
+
+    } catch (ex) {
+      console.log(ex)
+    }
 
 
-    //response of the api call will save user into context
+    // response of the api call will save user into context
 
     // route the form to the main
   }
