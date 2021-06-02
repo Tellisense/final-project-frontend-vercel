@@ -65,7 +65,7 @@ const LoginPage = () => {
         password: loginData.password,
       });
       console.log(`inside the API call:`)
-      throw new Error()
+
       console.log(`data:`, data)
       user?.setCurrentUser(data.user.email)
       localStorage.setItem('token', data.jwt);
